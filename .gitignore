@@ -1,0 +1,7 @@
+.gitignore
+.actionScriptProperties
+.flexProperties
+.project
+.settings/
+bin-debug/*
+bin-release/*
