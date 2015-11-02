@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 width="400" height="300"
+		 width.alert="600" height.alert="130"
+		 height.confirm="130"
+		 width.feedback="600"
+		 width.settings="500" height.settings="450">
+	<fx:Script>
+		<![CDATA[
+			import com.greensock.TweenMax;
+			import com.greensock.easing.Back;
+			
+			import core.Manager;
+			import core.Service;
+			
+			import mx.managers.PopUpManager;
+			import mx.managers.PopUpManagerChildList;
+			
+			public static const ANIM_NONE:int = 0;
+			public static const ANIM_DROP:int = 1;
+			
+			[Bindable] private static var m:Manager = Manager.getInstance();
+			[Bindable] private static var isWrongPassword:Boolean;
+			
+			private static function animateDialog(ad:AlertDialog,parent:DisplayObject,type:int):void {
+				if(type==ANIM_DROP) {
+					PopUpManager.addPopUp(ad,parent,true,PopUpManagerChildList.POPUP);
+					ad.x = (parent.width-ad.width)/2;
+					ad.y = -ad.height;
+					TweenMax.to(ad,0.5,{y:(parent.height-ad.height)/2,ease:Back.easeOut});
+				} else {
+					PopUpManager.addPopUp(ad,parent,true,PopUpManagerChildList.POPUP);
+					PopUpManager.centerPopUp(ad);
+				}
+			}
+			
+			public static function showAppStateConfirmPopup(parent:DisplayObject,animType:int,callBack:Function):AlertDialog {
+				var ad:AlertDialog = new AlertDialog();
+				ad.currentState = "confirm";
+				
+				animateDialog(ad,parent,animType);
+				
+				ad.btnOk.addEventListener(MouseEvent.CLICK, onOk);
+				ad.btnCancel.addEventListener(MouseEvent.CLICK, onCancel);
+				
+				function onOk(e:MouseEvent):void {
+					if(ad.inputPassword.text==m.appSettings.password) {
+						ad.btnOk.removeEventListener(MouseEvent.CLICK, onOk);
+						PopUpManager.removePopUp(ad);
+						callBack();
+					} else {
+						isWrongPassword = true;
+					}
+				}
+				
+				function onCancel(e:MouseEvent):void {
+					ad.btnCancel.removeEventListener(MouseEvent.CLICK, onCancel);
+					
+					PopUpManager.removePopUp(ad);
+				}
+				
+				return ad;
+			}
+			
+			public static function showSettingsPopup(parent:DisplayObject,animType:int,callBack:Function):AlertDialog {
+				var ad:AlertDialog = new AlertDialog();
+				ad.currentState = "settings";
+				
+				animateDialog(ad,parent,animType);
+				
+				var currentFontSizeScale:Number = m.fontsizemultiplier;
+				var t:Timer = new Timer(100,1);
+				t.addEventListener(TimerEvent.TIMER_COMPLETE, function onComplete(e:TimerEvent):void {
+					t.removeEventListener(TimerEvent.TIMER_COMPLETE, onComplete);
+					
+					ad.fontScaleSlider.value = m.fontsizemultiplier;
+				});
+				t.start();
+				
+				ad.btnOk0.addEventListener(MouseEvent.CLICK, onOk);
+				ad.btnCancel0.addEventListener(MouseEvent.CLICK, onCancel);
+				ad.btnLoadVideo.addEventListener(MouseEvent.CLICK, onLoadVideo);
+				
+				function onOk(e:MouseEvent):void {
+					ad.btnOk0.removeEventListener(MouseEvent.CLICK, onOk);
+					if(ad.serverURL.text!='') {
+						Service.SERVICE_HOST = ad.serverURL.text;
+					}
+					PopUpManager.removePopUp(ad);
+				}
+				
+				function onCancel(e:MouseEvent):void {
+					ad.btnCancel0.removeEventListener(MouseEvent.CLICK, onCancel);
+					
+					m.fontsizemultiplier = currentFontSizeScale;
+					
+					PopUpManager.removePopUp(ad);
+				}
+				
+				function onLoadVideo(e:MouseEvent):void {
+					var fr:File = new File();
+					fr.addEventListener(Event.SELECT, function onSelect(e:Event):void {
+						fr.removeEventListener(Event.SELECT, onSelect);
+						
+						var filePath:String = fr.nativePath;
+						//save to local data
+						m.appSettings.video = filePath;
+						m.setLocalData(m.appSettings.video,m.appSettings.videoIdleTime);
+					});
+					var ff:FileFilter = new FileFilter("Video file (*.mp4)","*.mp4");
+					fr.browse([ff]);
+				}
+				
+				return ad;
+			}
+			protected function fontScaleSlider_changeHandler(event:Event):void {
+				m.fontsizemultiplier = fontScaleSlider.value;
+			}
+			
+			public static function showFeedbackPopup(parent:DisplayObject,animType:int):AlertDialog {
+				var ad:AlertDialog = new AlertDialog();
+				ad.currentState = "feedback";
+				
+				animateDialog(ad,parent,animType);
+				
+				ad.btnSend.addEventListener(MouseEvent.CLICK, onOk);
+				ad.btnCancel1.addEventListener(MouseEvent.CLICK, onCancel);
+				
+				function onOk(e:MouseEvent):void {
+					ad.btnSend.removeEventListener(MouseEvent.CLICK, onOk);
+					PopUpManager.removePopUp(ad);
+					
+					Service.sendmail(ad.message.text, function done(o:Object):void {
+						trace("send email result:",o);
+					});
+				}
+				
+				function onCancel(e:MouseEvent):void {
+					ad.btnCancel1.removeEventListener(MouseEvent.CLICK, onCancel);
+					
+					PopUpManager.removePopUp(ad);
+				}
+				
+				return ad;
+			}
+			
+			protected function btnLoad_clickHandler(event:MouseEvent):void {
+				Service.SERVICE_HOST = serverURL.text;
+				m.grabData();
+			}
+			
+			[Bindable] private static var alertMessage:String;
+			public static function showAlertPopup(parent:DisplayObject,msg:String,animType:int):AlertDialog {
+				var ad:AlertDialog = new AlertDialog();
+				ad.currentState = "alert";
+				alertMessage = msg;
+				
+				animateDialog(ad,parent,animType);
+				
+				ad.btnClose.addEventListener(MouseEvent.CLICK, onClose);
+				
+				function onClose(e:MouseEvent):void {
+					ad.btnClose.removeEventListener(MouseEvent.CLICK, onClose);
+					PopUpManager.removePopUp(ad);
+				}
+				
+				return ad;
+			}
+			
+			protected function idleTimeSlider_changeHandler(event:Event):void {
+				//save to local data
+				m.appSettings.videoIdleTime = idleTimeSlider.value;
+				m.setLocalData(m.appSettings.video,m.appSettings.videoIdleTime);
+			}
+			
+		]]>
+	</fx:Script>
+	<s:states>
+		<s:State name="State1"/>
+		<s:State name="confirm"/>
+		<s:State name="settings"/>
+		<s:State name="feedback"/>
+		<s:State name="alert"/>
+	</s:states>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:BorderContainer includeIn="confirm" width="100%" height="130" backgroundAlpha="0.75"
+					   cornerRadius="4">
+		<s:layout>
+			<s:VerticalLayout gap="10"/>
+		</s:layout>
+		<s:Group width="100%" height="65">
+			<s:layout>
+				<s:VerticalLayout horizontalAlign="center" paddingTop="10"/>
+			</s:layout>
+			<s:Label fontFamily="calibri" text="Enter password:"/>
+			
+			<s:BorderContainer width="90%" height="36" backgroundAlpha="0"
+							   cornerRadius="4" horizontalCenter="0" verticalCenter="-20">
+				<s:RichEditableText id="inputPassword" width="95%" height="95%"
+									displayAsPassword="true" fontFamily="calibri" fontStyle="normal"
+									horizontalCenter="0" maxChars="16" multiline="false"
+									textAlign="center" toolTip="Password" verticalAlign="middle"
+									verticalCenter="0"/>
+			</s:BorderContainer>
+		</s:Group>
+		<s:Group width="100%">
+			<s:layout>
+				<s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</s:layout>
+			<s:Button id="btnCancel" width="40%" label="Cancel" fontFamily="calibri"
+					  buttonMode="true"/>
+			<s:Button id="btnOk" width="40%" label="OK" fontFamily="calibri"
+					  buttonMode="true" enabled="{inputPassword.text.length > 0}"/>
+		</s:Group>
+	</s:BorderContainer>
+	<s:BorderContainer includeIn="settings" width="100%" height="450" backgroundAlpha="0.75"
+					   cornerRadius="4">
+		<s:layout>
+			<s:VerticalLayout gap="0" verticalAlign="middle"/>
+		</s:layout>
+		<s:Group width="100%" height="75">
+			<s:Label fontFamily="xirod" horizontalCenter="0" text="Settings" verticalCenter="0"/>
+		</s:Group>
+		<s:Group width="100%" height="75">
+			<s:layout>
+				<s:VerticalLayout paddingLeft="20" paddingRight="20"/>
+			</s:layout>
+			<s:Label fontFamily="calibri" text="new Server URL"/>
+			<s:Group width="100%" height="36">
+				<s:layout>
+					<s:HorizontalLayout verticalAlign="middle"/>
+				</s:layout>
+				<s:BorderContainer width="80%" height="36" backgroundAlpha="0"
+								   cornerRadius="4" horizontalCenter="0" verticalCenter="-20">
+					<s:RichEditableText id="serverURL" width="95%" fontFamily="calibri"
+										fontStyle="normal" horizontalCenter="0" multiline="false"
+										toolTip="http://192.168.1.142/mykiosk/ or http://www.mycompany.com/mykiosk/"
+										verticalCenter="0"/>
+				</s:BorderContainer>
+				<s:Button id="btnLoad" width="20%" label="Load" enabled="{serverURL.text.length > 2}"
+						  click="btnLoad_clickHandler(event)"/>
+			</s:Group>
+		</s:Group>
+		<s:Group width="100%" height="75">
+			<s:layout>
+				<s:VerticalLayout paddingLeft="20" paddingRight="20"/>
+			</s:layout>
+			<s:Label x="34" y="27" fontFamily="calibri" text="Font Scale"/>
+			<s:HSlider id="fontScaleSlider" width="100%" maximum="3" minimum="1" stepSize="0.1"
+					   value="1" change="fontScaleSlider_changeHandler(event)"/>
+		</s:Group>
+		<s:Group width="100%" height="75">
+			<s:layout>
+				<s:VerticalLayout paddingLeft="20" paddingRight="20"/>
+			</s:layout>
+			<s:Label x="34" y="27" fontFamily="calibri" text="Load video (mp4)"/>
+			<s:Group width="100%" height="36">
+				<s:layout>
+					<s:HorizontalLayout verticalAlign="middle"/>
+				</s:layout>
+				<s:BorderContainer width="80%" height="36" backgroundAlpha="0"
+								   cornerRadius="4" horizontalCenter="0" verticalCenter="-20">
+					<s:RichEditableText id="videoPath" text="{m.appSettings.video}"  width="95%" fontFamily="calibri" enabled="false"
+										fontStyle="normal" horizontalCenter="0" multiline="false"
+										toolTip="http://192.168.1.142/mykiosk/ or http://www.mycompany.com/mykiosk/"
+										verticalCenter="0"/>
+				</s:BorderContainer>
+				<s:Button id="btnLoadVideo" width="20%" label="Browse"/>
+			</s:Group>
+		</s:Group>
+		<s:Group width="100%" height="75">
+			<s:layout>
+				<s:VerticalLayout paddingLeft="20" paddingRight="20"/>
+			</s:layout>
+			<s:Label x="34" y="27" fontFamily="calibri" text="Video idle time (seconds)"/>
+			<s:HSlider id="idleTimeSlider" width="100%" maximum="300" minimum="30" stepSize="5"
+					   value="{m.appSettings.videoIdleTime}" change="idleTimeSlider_changeHandler(event)"/>
+		</s:Group>
+		<s:Group width="100%" height="75">
+			<s:layout>
+				<s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</s:layout>
+			<s:Button id="btnCancel0" width="40%" label="Cancel" fontFamily="calibri"/>
+			<s:Button id="btnOk0" width="40%" label="OK" fontFamily="calibri"/>
+		</s:Group>
+	</s:BorderContainer>
+	<s:BorderContainer includeIn="feedback" width="100%" height="300" backgroundAlpha="0.75"
+					   cornerRadius="4">
+		<s:Label top="20" fontFamily="xirod" horizontalCenter="0" text="Kritik &amp; Saran"/>
+		<s:BorderContainer includeIn="feedback" width="90%" height="175" backgroundAlpha="0"
+						   cornerRadius="4" horizontalCenter="0" verticalCenter="-20">
+			<s:layout>
+				<s:VerticalLayout paddingBottom="10" paddingLeft="10" paddingRight="10"
+								  paddingTop="10"/>
+			</s:layout>
+			<s:RichEditableText id="message" width="100%" height="100%" fontFamily="calibri"/>
+		</s:BorderContainer>
+		<s:Group bottom="10" width="100%" height="50" horizontalCenter="0">
+			<s:layout>
+				<s:HorizontalLayout horizontalAlign="center" verticalAlign="middle"/>
+			</s:layout>
+			<s:Button id="btnCancel1" width="40%" label="Batal" fontFamily="calibri"/>
+			<s:Button id="btnSend" width="40%" label="Kirim" fontFamily="calibri" enabled="{message.text!=''}"/>
+		</s:Group>
+	</s:BorderContainer>
+	<s:BorderContainer includeIn="alert" width="100%" height="130" backgroundAlpha="0.75"
+					   cornerRadius="4">
+		<s:Label x="10" y="10" width="578" height="58" text="{alertMessage}" textAlign="center"
+				 verticalAlign="middle"/>
+		<s:Button id="btnClose" bottom="10" width="20%" label="Close" horizontalCenter="0"/>
+	</s:BorderContainer>
+</s:Group>

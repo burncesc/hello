@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+	
+	<fx:Script>
+		<![CDATA[
+			import core.Manager;
+			import core.event.KioskEvent;
+			
+			import mx.collections.ArrayCollection;
+			
+			import spark.filters.DropShadowFilter;
+			
+			private var m:Manager = Manager.getInstance();
+			[Bindable] private var images:ArrayCollection;
+			[Bindable] public var activeImageUrl:String;
+			
+			public function init(height:Number,data:ArrayCollection):void {
+				this.height = height;
+				this.images = data;
+				this.activeImageUrl = images[0];
+				var t:Timer = new Timer(100,1);
+				t.addEventListener(TimerEvent.TIMER_COMPLETE, function onComplete(e:TimerEvent):void {
+					t.removeEventListener(TimerEvent.TIMER_COMPLETE, onComplete);
+					
+					m.dispatchEvent(new KioskEvent(KioskEvent.UPDATE_GALLERY_ACTIVE_THUMB));
+				});
+				t.start();
+			}
+			
+			protected function imageFull_clickHandler(event:MouseEvent):void
+			{
+				var idx:int = images.getItemIndex(activeImageUrl);
+				if(idx < images.length - 1) {
+					activeImageUrl = images.getItemAt(idx + 1) as String;
+				}
+				m.dispatchEvent(new KioskEvent(KioskEvent.UPDATE_GALLERY_ACTIVE_THUMB));
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:layout>
+		<s:VerticalLayout gap="25" horizontalAlign="center" verticalAlign="middle"/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Image id="imageFull" width="90%" height="70%"
+			 filters="{[new spark.filters.DropShadowFilter(10,45,0,0.7,10,10,1,3)]}" smooth="true"
+			 smoothingQuality="high" source="{activeImageUrl}"
+			 buttonMode="true" click="imageFull_clickHandler(event)"/>
+	<s:List id="thumbList" width="100%" height="20%" borderVisible="false"
+			contentBackgroundAlpha="0.0" useVirtualLayout="false" verticalScrollPolicy="off"
+			itemRenderer="components.GalleryThumb" dataProvider="{images}">
+		<s:layout>
+			<s:HorizontalLayout gap="15" verticalAlign="middle"/>
+		</s:layout>
+	</s:List>
+</s:Group>

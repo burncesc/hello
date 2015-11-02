@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				xmlns:mx="library://ns.adobe.com/flex/mx"
+				xmlns:components="components.*"
+				width="100%" height="100" autoDrawBackground="false"
+				dataChange="onDataChange(event)"
+				height.bullet="{orderList.height + 25*m.fontsizemultiplier}"
+				height.feedback="{feedbackText.height + 20}"
+				height.gallery="{bodyText.height + 20}"
+				height.image="{feedbackText.height + 20}"
+				height.numbering="{orderList.height + 25*m.fontsizemultiplier}"
+				height.text="{bodyText.height + 25*m.fontsizemultiplier}">
+	<s:layout>
+		<s:VerticalLayout gap="10" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0"
+						  horizontalAlign.image="center"/>
+	</s:layout>
+	
+	<fx:Script>
+		<![CDATA[
+			import core.ContentItem;
+			import core.Manager;
+			
+			import flash.net.navigateToURL;
+			
+			import mx.events.FlexEvent;
+			
+			[Bindable] private var m:Manager = Manager.getInstance();
+			
+			override public function set data(value:Object):void {
+				super.data = value;
+				if(!value) return;
+				if(data.type==ContentItem.TYPE_TEXT) {
+					currentState = "text";
+//					this.height = bodyText.height + 20;
+				} else if(data.type==ContentItem.TYPE_FEEDBACK) {
+					currentState = "feedback";
+//					this.height = feedbackText.height + 20;
+				} else if(data.type==ContentItem.TYPE_IMAGE) {
+					currentState = "image";
+				} else if(data.type==ContentItem.TYPE_GALLERY) {
+					currentState = "gallery";
+					var t:Timer = new Timer(100,1);
+					t.addEventListener(TimerEvent.TIMER_COMPLETE, function onComplete(e:TimerEvent):void {
+						t.removeEventListener(TimerEvent.TIMER_COMPLETE, onComplete);
+						
+						m.gallery = gallery;
+						gallery.init(parent.height,data.contentArray);
+					});
+					t.start();
+				} else if(data.type==ContentItem.TYPE_NUMBERING) {
+					currentState = "numbering";
+				} else if(data.type==ContentItem.TYPE_BULLET) {
+					currentState = "bullet";
+				} 
+			}
+			
+			override protected function getCurrentRendererState():String {
+				if (data.type==ContentItem.TYPE_NUMBERING)
+					return "numbering";
+				if (data.type==ContentItem.TYPE_BULLET)
+					return "bullet";
+				if (data.type==ContentItem.TYPE_IMAGE)
+					return "image";
+				if (data.type==ContentItem.TYPE_GALLERY)
+					return "gallery";
+				if (data.type==ContentItem.TYPE_FEEDBACK)
+					return "feedback";
+				
+				return "text";
+			}
+			
+			protected function label1_clickHandler(event:MouseEvent):void
+			{
+//				m.mainApp.minimize();
+//				var req:URLRequest = new URLRequest("mailto:"+data.subtitle+"?subject=Kritik dan Saran");
+//				navigateToURL(req,"_self");
+				AlertDialog.showFeedbackPopup(m.mainApp,AlertDialog.ANIM_DROP);
+			}
+			
+			protected function onDataChange(event:FlexEvent):void {
+				invalidateRendererState();
+			}
+			
+		]]>
+	</fx:Script>
+	<s:states>
+		<s:State name="text"/>
+		<s:State name="feedback"/>
+		<s:State name="image"/>
+		<s:State name="gallery"/>
+		<s:State name="numbering"/>
+		<s:State name="bullet"/>
+	</s:states>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Label includeIn="bullet,numbering,text" width="100%" fontFamily="calibribold" fontSize="{14*m.fontsizemultiplier}" fontWeight="bold"
+			 text="{data.subtitle}"/>
+	<s:Label id="bodyText" includeIn="text" width="100%" fontFamily="calibri"
+			 fontSize="{12*m.fontsizemultiplier}" text="{data.text}"/>
+	<s:Label id="feedbackText" includeIn="feedback" width="100%" fontFamily="calibri"
+			 fontSize="{12*m.fontsizemultiplier}" text="{data.text}" textAlign="center"/>
+	<s:Label includeIn="feedback" width="100%" buttonMode="true" click="label1_clickHandler(event)"
+			 color="#0000CF" fontFamily="calibribold" fontSize="{12*m.fontsizemultiplier}"
+			 fontWeight="bold" text="{data.subtitle}" textAlign="center"/>
+	<s:Image includeIn="image" width="90%" source="{data.contentArray.getItemAt(0)}"/>
+	<s:Label includeIn="image" width="90%" buttonMode="true" click="label1_clickHandler(event)"
+			 color="#000000" fontFamily="calibriitalic" fontSize="{12*m.fontsizemultiplier}"
+			 fontStyle="italic" fontWeight="normal" text="{data.subtitle}" textAlign="center"/>
+	<components:Gallery id="gallery" includeIn="gallery" width="100%">
+	</components:Gallery>
+	<s:List id="orderList" includeIn="bullet,numbering" width="100%" borderVisible="false"
+			contentBackgroundAlpha="0.0" dataProvider="{data.contentArray}"
+			itemRenderer="components.OrderNumber"
+			itemRenderer.bullet="components.OrderBullet" verticalScrollPolicy.bullet="off"
+			verticalScrollPolicy.numbering="off">
+		<s:layout>
+			<s:VerticalLayout/>
+		</s:layout>
+	</s:List>
+</s:ItemRenderer>

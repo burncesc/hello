@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   showStatusBar="false" alwaysInFront="false"
+					   addedToStage="init()">
+	
+	<fx:Style source="simplekiosk.css"/>
+	
+	<fx:Script>
+		<![CDATA[
+			import components.AlertDialog;
+			
+			import core.Manager;
+			import core.Service;
+			
+			import mx.events.FlexEvent;
+			
+			[Bindable] private var m:Manager = Manager.getInstance();
+			
+			protected function init():void
+			{
+//				stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+				width = Capabilities.screenResolutionX;
+				height = Capabilities.screenResolutionY;
+//				this.addEventListener(Event.ACTIVATE, function onRestore(e:Event):void {
+//					maximize();
+//					e.preventDefault();
+//					width = Capabilities.screenResolutionX;
+//					height = Capabilities.screenResolutionY;
+//					trace(width,height);
+//					stage.displayState = StageDisplayState.FULL_SCREEN;
+//					stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;
+//				});
+				stage.addEventListener(FullScreenEvent.FULL_SCREEN, function onFullscreenChange(e:FullScreenEvent):void {
+					e.preventDefault();
+				});
+				this.addEventListener(Event.CLOSING, function onClosing(e:Event):void {
+//					e.preventDefault();//uncomment this!
+				});
+				stage.addEventListener(KeyboardEvent.KEY_DOWN, function(e:KeyboardEvent):void {
+					if (e.keyCode == 27 || e.keyCode == 91 || e.keyCode == 115 || e.ctrlKey || e.altKey) {
+						e.preventDefault();
+//						e.stopImmediatePropagation();
+//						e.stopPropagation();
+					}
+				});
+				
+				m.initManager(this);
+				
+//				Service.sendmail(function status(o:Object):void {
+//					trace("send email status:",o);
+//				});
+				
+				testMail();
+			}
+			
+			private function testMail():void {
+//				var mailer:Mailer = new Mailer();
+//				//put your mail server here
+//				mailer.setServer('smtp.gmail.com');
+//				//connect to the smtp server
+//				mailer.connect();
+//				//create a message
+//				var body:String = 'My email message to you.\r\n';
+//				//send the mail
+//				mailer.sendMail('willymulyana@gmail.com', 'willymulyana@yahoo.com', 'My subject', body);
+//				//allow one second to complete mail transmission before disconnecting
+//				setInterval(function():void{mailer.disconnect();}, 1000);
+			}
+			
+			protected function videoDisplay_clickHandler(event:MouseEvent):void {
+				videoDisplay.visible = false;
+				videoDisplay.stop();
+			}
+			
+			protected function btnMinimize_clickHandler(event:MouseEvent):void {
+				if(m.isError) {
+					minimize();
+				}
+				AlertDialog.showAppStateConfirmPopup(this,AlertDialog.ANIM_DROP,minimize);
+			}
+			
+			protected function btnClose_clickHandler(event:MouseEvent):void {
+				if(m.isError) {
+					exit();
+				}
+				AlertDialog.showAppStateConfirmPopup(this,AlertDialog.ANIM_DROP,exit);
+			}
+			
+			private var count:int = 0
+			protected function logoBox_clickHandler(event:MouseEvent):void {
+				count++;
+				if(count==7) {
+					count = 0;
+					//open settings dialog
+					AlertDialog.showSettingsPopup(this,AlertDialog.ANIM_DROP,null);
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:Image width="100%" height="100%" scaleMode="stretch" smooth="true" source="{m.appSettings.bg}"/>
+	<s:Group width="100%" height="100%">
+		<s:layout>
+			<s:HorizontalLayout gap="10" paddingBottom="10" paddingLeft="10" paddingRight="10"
+								paddingTop="10"/>
+		</s:layout>
+		<s:BorderContainer width="25%" height="100%" backgroundAlpha="0.0" borderVisible="false">
+			<s:layout>
+				<s:VerticalLayout/>
+			</s:layout>
+			<s:BorderContainer id="logoBox" width="100%" height="20%" backgroundAlpha="0.0" borderColor="#FF0000"
+							   borderVisible="{m.isError?true:false}" click="logoBox_clickHandler(event)">
+			</s:BorderContainer>
+			<s:List id="menuBox" width="100%" height="60%" borderVisible="false"
+					contentBackgroundAlpha="0.0" dataProvider="{m.appData}"
+					itemRenderer="components.MenuRenderer">
+				<s:layout>
+					<s:VerticalLayout/>
+				</s:layout>
+			</s:List>
+		</s:BorderContainer>
+		<s:BorderContainer width="75%" height="100%" backgroundAlpha="0" borderVisible="false">
+			<s:layout>
+				<s:VerticalLayout/>
+			</s:layout>
+			<s:Group id="buttonBox" width="100%" height="5%">
+				<s:layout>
+					<s:HorizontalLayout horizontalAlign="right"/>
+				</s:layout>
+				<s:Image id="btnMinimize" width="{btnMinimize.height}" height="100%" buttonMode="true"
+						 source="@Embed('assets/images/remove.png')" click="btnMinimize_clickHandler(event)"/>
+				<s:Image id="btnClose" width="{btnMinimize.height}" height="100%" buttonMode="true"
+						 source="@Embed('assets/images/close.png')" click="btnClose_clickHandler(event)"/>
+			</s:Group>
+			<s:BorderContainer id="contentBox" width="100%" height="95%" backgroundAlpha="0.75"
+							   borderColor="#00F6FF" cornerRadius="4">
+				<s:layout>
+					<s:VerticalLayout gap="10" paddingBottom="20" paddingLeft="20" paddingRight="20"
+									  paddingTop="20"/>
+				</s:layout>
+				<s:List id="contentList" width="100%" height="100%" borderVisible="false"
+						contentBackgroundAlpha="0.0" dataProvider="{m.activeData.content}"
+						itemRenderer="components.ContentRenderer" useVirtualLayout="false">
+					<s:layout>
+						<s:VerticalLayout/>
+					</s:layout>
+				</s:List>
+			</s:BorderContainer>
+		</s:BorderContainer>
+	</s:Group>
+	<s:VideoDisplay id="videoDisplay" width="100%" height="100%" loop="true" scaleMode="stretch" visible="false"
+					source="{m.appSettings.video}" click="videoDisplay_clickHandler(event)" autoRewind="true"/>
+	
+</s:WindowedApplication>
