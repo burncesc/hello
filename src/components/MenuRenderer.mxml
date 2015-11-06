@@ -2,7 +2,7 @@
 <s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
 				xmlns:s="library://ns.adobe.com/flex/spark" 
 				xmlns:mx="library://ns.adobe.com/flex/mx"
-				width="100%" height="30" autoDrawBackground="false" buttonMode="true"
+				width="100%" height="40" autoDrawBackground="false" buttonMode="true"
 				click="itemrenderer1_clickHandler(event)">
 	
 	<fx:Script>
@@ -34,9 +34,9 @@
 	<fx:Declarations>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<s:BorderContainer width="100%" height="30" backgroundAlpha="0.9" borderColor="#00F6FF"
-					   cornerRadius="4" horizontalCenter="0" verticalCenter="0">
-		<s:Label color="#00044E" fontFamily="xirod" fontSize="12" fontWeight="normal"
+	<s:BorderContainer width="100%" height="35" backgroundAlpha="0.9" borderColor="#00F6FF"
+					   cornerRadius="10" horizontalCenter="0" verticalCenter="0">
+		<s:Label color="#00044E" fontFamily="beach" fontSize="25" fontWeight="normal"
 				 horizontalCenter="0" text="{data.title}" verticalCenter="0"/>
 	</s:BorderContainer>
 </s:ItemRenderer>
