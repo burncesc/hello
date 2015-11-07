@@ -55,7 +55,7 @@ package core
 			this.mainApp = mainApp;
 			manageIdleTimer();
 			getLocalData();
-//			Service.SERVICE_HOST = "http://127.0.0.1/bpkp/";
+			Service.SERVICE_HOST = "http://127.0.0.1/bpkp/";
 			grabData();
 //			Service.ping(function(o:Object):void {
 //				if(String(o).indexOf("success")>-1) {
