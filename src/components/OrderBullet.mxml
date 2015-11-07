@@ -3,7 +3,7 @@
 				xmlns:s="library://ns.adobe.com/flex/spark" 
 				xmlns:mx="library://ns.adobe.com/flex/mx"
 				width="100%" autoDrawBackground="false"
-				height="{pointText.height + 2*m.fontsizemultiplier}">
+				height="{pointText.height + 1*m.fontsizemultiplier}">
 	
 	<fx:Script>
 		<![CDATA[
@@ -27,5 +27,5 @@
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
 	<s:Label width="5%" text="•" textAlign="right" fontFamily="calibri" fontSize="{12*m.fontsizemultiplier}"/>
-	<s:Label id="pointText" width="95%" text="{data}" fontFamily="calibri" fontSize="{12*m.fontsizemultiplier}"/>
+	<s:Label id="pointText" width="90%" text="{data}" fontFamily="calibri" fontSize="{12*m.fontsizemultiplier}" textAlign="justify"/>
 </s:ItemRenderer>

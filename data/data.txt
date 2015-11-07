@@ -19,18 +19,18 @@
 	},
 	{
 		"content": [{
-			"subtitle": "\nSejarah berdirinya kantor Perwakilan BPKP DIY \n\n\n",
-			"text": "Sejarah berdirinya kantor Perwakilan BPKP Provinsi D.I. Yogyakarta tidak lepas dari panjangnya sejarang berdirinya BPKP. Kantor Perwakilan BPKP Provinsi D.I. Yogyakarta termasuk kantor perwakilan BPKP yang sudah cukup lama yakni sejak tahun 1960-an. Pada saat itu lembaga BPKP masih bernama Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) sesuai dengan Keputusan Presiden Nomor 239 Tahun 1966 tentang dibentuknya Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) pada Departemen Keuangan. Tugas DDPKN (dikenal kemudian sebagai DJPKN) meliputi pengawasan anggaran dan pengawasan badan usaha/jawatan, yang semula menjadi tugas DAN dan Thesauri Jenderal. Untuk kantor Perwakilan tersebut dibuka masih berkantor di wilayah Kusumanegara dan masih menjadi satu gedung dengan Departemen Keuangan. Baru pada tahun 1972 Kantor perwakilan dipindah ke Jl. Sultan Agung No. 20 Yogyakarta.",
+			"subtitle": "\t\t\t\tSejarah berdirinya kantor Perwakilan BPKP DIY",
+			"text": "\n\tSejarah berdirinya kantor Perwakilan BPKP Provinsi D.I. Yogyakarta tidak lepas dari panjangnya sejarang berdirinya BPKP. Kantor Perwakilan BPKP Provinsi D.I. Yogyakarta termasuk kantor perwakilan BPKP yang sudah cukup lama yakni sejak tahun 1960-an. Pada saat itu lembaga BPKP masih bernama Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) sesuai dengan Keputusan Presiden Nomor 239 Tahun 1966 tentang dibentuknya Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) pada Departemen Keuangan. Tugas DDPKN (dikenal kemudian sebagai DJPKN) meliputi pengawasan anggaran dan pengawasan badan usaha/jawatan, yang semula menjadi tugas DAN dan Thesauri Jenderal. Untuk kantor Perwakilan tersebut dibuka masih berkantor di wilayah Kusumanegara dan masih menjadi satu gedung dengan Departemen Keuangan. Baru pada tahun 1972 Kantor perwakilan dipindah ke Jl. Sultan Agung No. 20 Yogyakarta.",
 			"type": "text"
 		},
 		{
 			"subtitle": "",
-			"text": "Pada saat berkantor di Jl. Sultan Agung No. 20 itulah nama DJPKN telah berubah menjadi Badan Pengawas Keuangan dan Pembangunan (BPKP) berdasarkan surat Keputusan Presiden Nomor 31 Tahun 1983 tanggal 30 Mei 1983 DJPKN ditransformasikan menjadi BPKP, sebuah lembaga pemerintah non departemen (LPND) yang berada di bawah dan bertanggung jawab langsung kepada Presiden. Kemudian tahun 1998 kantor Perwakilan BPKP Provinsi D.I. Yogyakarta pindah ke Jl. Parangtritis KM. 5,5 Sewon, Bantul dengan status tanah dan bangunan milik BPKP ",
+			"text": "\tPada saat berkantor di Jl. Sultan Agung No. 20 itulah nama DJPKN telah berubah menjadi Badan Pengawas Keuangan dan Pembangunan (BPKP) berdasarkan surat Keputusan Presiden Nomor 31 Tahun 1983 tanggal 30 Mei 1983 DJPKN ditransformasikan menjadi BPKP, sebuah lembaga pemerintah non departemen (LPND) yang berada di bawah dan bertanggung jawab langsung kepada Presiden. Kemudian tahun 1998 kantor Perwakilan BPKP Provinsi D.I. Yogyakarta pindah ke Jl. Parangtritis KM. 5,5 Sewon, Bantul dengan status tanah dan bangunan milik BPKP ",
 			"type": "text"
 		},
 		{
 			"subtitle": "",
-			"text": "Pada tahun 2006 karena adanya bencana gempa di Jogjakarta, waktu itu kantor Perwakilan BPKP Provinsi D.I. Yogyakarta rusak parah. Untuk tetap bisa melaksanakan tugasnya, kantor dipindahkan ke Jalan  Mrican Baru Nomor 29-35 Yogyakarta untuk sementara hingga pembangunan gedung baru selesai dibangun. Pembangunan gedung baru dilakukan melalui kontrak multiyears tahun 2006-2007. Kemudian pada tanggal 23 Juni tahun 2008 gedung baru Perwakilan BPKP Provinsi D.I. Yogyakarta Jl.Parangtritis KM. 5,5 Sewon, Bantul diresmikan oleh Gubernur Provinsi D.I Yogyakarta Sri Sultan Hamengkubuwono X dan Kepala BPKP Didi Widayadi. Setelah peresmian, gedung kantor tersebut mulai ditempati lagi untuk melakukan aktivitas kegiatan sampai dengan sekarang.",
+			"text": "\tPada tahun 2006 karena adanya bencana gempa di Jogjakarta, waktu itu kantor Perwakilan BPKP Provinsi D.I. Yogyakarta rusak parah. Untuk tetap bisa melaksanakan tugasnya, kantor dipindahkan ke Jalan  Mrican Baru Nomor 29-35 Yogyakarta untuk sementara hingga pembangunan gedung baru selesai dibangun. Pembangunan gedung baru dilakukan melalui kontrak multiyears tahun 2006-2007. Kemudian pada tanggal 23 Juni tahun 2008 gedung baru Perwakilan BPKP Provinsi D.I. Yogyakarta Jl.Parangtritis KM. 5,5 Sewon, Bantul diresmikan oleh Gubernur Provinsi D.I Yogyakarta Sri Sultan Hamengkubuwono X dan Kepala BPKP Didi Widayadi. Setelah peresmian, gedung kantor tersebut mulai ditempati lagi untuk melakukan aktivitas kegiatan sampai dengan sekarang.",
 			"type": "text"
 		}],
 		"title": "Sejarah Berdiri"
@@ -52,7 +52,7 @@
           ]
 		},
 		{
-			"subtitle": "\nNILAI-NILAI LUHUR BPKP (P I O N I R)",
+			"subtitle": "NILAI-NILAI LUHUR BPKP (P I O N I R)",
 			"type": "numbering",
 			"contentArray": [
 			  "Profesional",
@@ -64,7 +64,7 @@
           ]
 		},
 		{
-			"subtitle": "\nSEMANGAT KERJA 5-AS BPKP",
+			"subtitle": "SEMANGAT KERJA 5-AS BPKP",
 			"text": "\tKerja Keras, Kerja Cerdas, Kerja Tuntas, Kerja Ikhlas, Kerja Penuh Integritas.",
 			"type": "text"
 		}],
@@ -87,9 +87,10 @@
 			"Koordinator Pengawas Kelompok JFA Bidang Prolap Serta Pembinaan APIP"]
 		},
 		{
-			"subtitle": "2. Bagian Tata Usaha mempunyai tugas melaksanakan urusan kepegawaian, keuangan, urusan dalam, perlengkapan, rumah tangga, pengelolaan perpustakaan",
-			"type": "text",
-			"text": ""
+			"subtitle": "2. Bagian Tata Usaha mempunyai tugas melaksanakan :",
+			"type": "bullet",
+			"contentArray": ["Urusan kepegawaian, keuangan, persuratan, urusan dalam, perlengkapan dan rumah tangga",
+			"Pengelolaan perpustakaan"]
 		},
 		{
 			"subtitle": "3. Bagian Tata Usaha menyelenggarakan fungsi :",
@@ -108,7 +109,7 @@
 		},
 		{
 			"subtitle": "",
-			"text": "Selain struktur organisasi tersebut di atas, terdapat Kelompok Jabatan Fungsional mempunyai tugas melakukan kegiatan sesuai dengan jabatan fungsional masing-masing berdasarkan peraturan perundang-undangan yang berlaku. Di Perwakilan BPKP Daerah Istimewa Yogyakarta, Kelompok Jabatan Fungsional terdiri dari Jabatan Fungsional Auditor dan sejumlah jabatan fungsional lainnya yaitu Kelompok Jabatan Fungsional Analis Kepegawaian, Kelompok Jabatan Fungsional Arsiparis dan Kelompok Jabatan Fungsional Pranata Komputer.",
+			"text": "\tSelain struktur organisasi tersebut di atas, terdapat Kelompok Jabatan Fungsional mempunyai tugas melakukan kegiatan sesuai dengan jabatan fungsional masing-masing berdasarkan peraturan perundang-undangan yang berlaku. Di Perwakilan BPKP Daerah Istimewa Yogyakarta, Kelompok Jabatan Fungsional terdiri dari Jabatan Fungsional Auditor dan sejumlah jabatan fungsional lainnya yaitu Kelompok Jabatan Fungsional Analis Kepegawaian, Kelompok Jabatan Fungsional Arsiparis dan Kelompok Jabatan Fungsional Pranata Komputer.",
 			"type": "text"
 		}],
 		"title": "Struktur  Organisasi"
