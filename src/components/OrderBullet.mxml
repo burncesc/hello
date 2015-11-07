@@ -3,7 +3,7 @@
 				xmlns:s="library://ns.adobe.com/flex/spark" 
 				xmlns:mx="library://ns.adobe.com/flex/mx"
 				width="100%" autoDrawBackground="false"
-				height="{pointText.height + 10*m.fontsizemultiplier}">
+				height="{pointText.height + 2*m.fontsizemultiplier}">
 	
 	<fx:Script>
 		<![CDATA[
