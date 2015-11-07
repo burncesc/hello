@@ -19,7 +19,7 @@
 	},
 	{
 		"content": [{
-			"subtitle": "\nSejarah berdirinya kantor Perwakilan BPKP DIY \n",
+			"subtitle": "\nSejarah berdirinya kantor Perwakilan BPKP DIY \n\n\n",
 			"text": "Sejarah berdirinya kantor Perwakilan BPKP Provinsi D.I. Yogyakarta tidak lepas dari panjangnya sejarang berdirinya BPKP. Kantor Perwakilan BPKP Provinsi D.I. Yogyakarta termasuk kantor perwakilan BPKP yang sudah cukup lama yakni sejak tahun 1960-an. Pada saat itu lembaga BPKP masih bernama Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) sesuai dengan Keputusan Presiden Nomor 239 Tahun 1966 tentang dibentuknya Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) pada Departemen Keuangan. Tugas DDPKN (dikenal kemudian sebagai DJPKN) meliputi pengawasan anggaran dan pengawasan badan usaha/jawatan, yang semula menjadi tugas DAN dan Thesauri Jenderal. Untuk kantor Perwakilan tersebut dibuka masih berkantor di wilayah Kusumanegara dan masih menjadi satu gedung dengan Departemen Keuangan. Baru pada tahun 1972 Kantor perwakilan dipindah ke Jl. Sultan Agung No. 20 Yogyakarta.",
 			"type": "text"
 		},
@@ -37,11 +37,38 @@
 	},
 	{
 		"content": [{
-			"subtitle": "Visi Kami",
-			"text": "visi text bla bla bla ...",
+			"subtitle": "Visi :",
+			"text": "Auditor Presiden yang responsif, interaktif, dan terpercaya untuk mewujudkan akuntabilitas keuangan negara yang berkualitas\n",
+			"type": "text"
+		},
+		{
+			"subtitle": "Misi :",
+			"type": "numbering",
+			"contentArray": [
+			  "Menyelenggarakan pengawasan intern terhadap akuntabilitas keuangan negara yang mendukung tata kepemerintahan yang baik dan bebas KKN.",
+			  "Membina secara efektif penyelenggaraan sistem pengendalian intern pemerintah.",
+			  "Mengembangkan kapasitas pengawasan intern pemerintah yang profesional dan kompeten",
+			  "Menyelenggarakan sistem dukungan pengambilan keputusan yang andal bagi Presiden/pemerintah."
+          ]
+		},
+		{
+			"subtitle": "\nNILAI-NILAI LUHUR BPKP (P I O N I R)",
+			"type": "numbering",
+			"contentArray": [
+			  "Profesional",
+			  "Integritas",
+			  "Orientasi pada Pengguna",
+			  "Nurani dan Akal Sehat",
+			  "Independensi",
+			  "Responsibel"
+          ]
+		},
+		{
+			"subtitle": "\nSEMANGAT KERJA 5-AS BPKP",
+			"text": "\tKerja Keras, Kerja Cerdas, Kerja Tuntas, Kerja Ikhlas, Kerja Penuh Integritas.",
 			"type": "text"
 		}],
-		"title": "Visi"
+		"title": "Visi Dan Misi"
 	},
 	{
 		"content": [{
