@@ -35,6 +35,7 @@
 //					this.height = bodyText.height + 20;
 				} else if(data.type==ContentItem.TYPE_FEEDBACK) {
 					currentState = "feedback";
+					AlertDialog.showFeedbackPopup(m.mainApp,AlertDialog.ANIM_DROP);
 //					this.height = feedbackText.height + 20;
 				} else if(data.type==ContentItem.TYPE_IMAGE) {
 					currentState = "image";
