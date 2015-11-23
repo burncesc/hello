@@ -7,6 +7,7 @@ package core.event
 		
 		public static const CONNECTED:String = "connected";
 		public static const UPDATE_GALLERY_ACTIVE_THUMB:String = "update gallery active thumb";
+		public static const UPDATE_MENU_RENDER:String = "update menu render";
 		
 		public static const OPEN_APP:String = "open app";
 		
