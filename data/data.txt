@@ -356,16 +356,6 @@
     {
       "content": [
         {
-          "subtitle": "\n\nKritik Dan Saran untuk BPKP JOGJA",
-          "text": "\n\nTerima Kasih\n\nAtas Kritik Dan Sarannya\n\nSemoga dapat membuat kami lebih baik lagi, Aamiin",
-          "type": "feedback"
-        }
-      ],
-      "title": "Kritik & Saran"
-    },
-    {
-      "content": [
-		{
           "subtitle": "",
           "type": "image",
           "contentArray": [
@@ -379,6 +369,16 @@
         }
       ],
       "title": "Informasi Publik"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "\n\nKritik Dan Saran untuk BPKP JOGJA",
+          "text": "\n\nTerima Kasih\n\nAtas Kritik Dan Sarannya\n\nSemoga dapat membuat kami lebih baik lagi, Aamiin",
+          "type": "feedback"
+        }
+      ],
+      "title": "Kritik & Saran"
     }
   ]
 }
