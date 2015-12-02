@@ -1,211 +1,384 @@
 {
-	"app_settings": {
-		"background_url": "images/background/bluen.jpg",
-		"password": "dn",
-		"feedback": {
-			"gmail_sender": "bpkp.jogja@gmail.com",
-			"gmail_password": "DjogjaIstimewa",
-			"to": "huda.puma19@gmail.com",
-			"subject": "Kritik dan Saran Aplikasi Mandiri"
-		}
-	},
-	"app_content": [{
-		"content": [{
-			"subtitle": "Selamat Datang!",
-			"text": "Silahkan pilih menu yang di inginkan",
-			"type": "text"
-		}],
-		"title": "Home"
-	},
-	{
-		"content": [{
-			"subtitle": "\t\t\t\tSejarah berdirinya kantor Perwakilan BPKP DIY",
-			"text": "\n\tSejarah berdirinya kantor Perwakilan BPKP Provinsi D.I. Yogyakarta tidak lepas dari panjangnya sejarang berdirinya BPKP. Kantor Perwakilan BPKP Provinsi D.I. Yogyakarta termasuk kantor perwakilan BPKP yang sudah cukup lama yakni sejak tahun 1960-an. Pada saat itu lembaga BPKP masih bernama Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) sesuai dengan Keputusan Presiden Nomor 239 Tahun 1966 tentang dibentuknya Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) pada Departemen Keuangan. Tugas DDPKN (dikenal kemudian sebagai DJPKN) meliputi pengawasan anggaran dan pengawasan badan usaha/jawatan, yang semula menjadi tugas DAN dan Thesauri Jenderal. Untuk kantor Perwakilan tersebut dibuka masih berkantor di wilayah Kusumanegara dan masih menjadi satu gedung dengan Departemen Keuangan. Baru pada tahun 1972 Kantor perwakilan dipindah ke Jl. Sultan Agung No. 20 Yogyakarta.",
-			"type": "text"
-		},
-		{
-			"subtitle": "",
-			"text": "\tPada saat berkantor di Jl. Sultan Agung No. 20 itulah nama DJPKN telah berubah menjadi Badan Pengawas Keuangan dan Pembangunan (BPKP) berdasarkan surat Keputusan Presiden Nomor 31 Tahun 1983 tanggal 30 Mei 1983 DJPKN ditransformasikan menjadi BPKP, sebuah lembaga pemerintah non departemen (LPND) yang berada di bawah dan bertanggung jawab langsung kepada Presiden. Kemudian tahun 1998 kantor Perwakilan BPKP Provinsi D.I. Yogyakarta pindah ke Jl. Parangtritis KM. 5,5 Sewon, Bantul dengan status tanah dan bangunan milik BPKP ",
-			"type": "text"
-		},
-		{
-			"subtitle": "",
-			"text": "\tPada tahun 2006 karena adanya bencana gempa di Jogjakarta, waktu itu kantor Perwakilan BPKP Provinsi D.I. Yogyakarta rusak parah. Untuk tetap bisa melaksanakan tugasnya, kantor dipindahkan ke Jalan  Mrican Baru Nomor 29-35 Yogyakarta untuk sementara hingga pembangunan gedung baru selesai dibangun. Pembangunan gedung baru dilakukan melalui kontrak multiyears tahun 2006-2007. Kemudian pada tanggal 23 Juni tahun 2008 gedung baru Perwakilan BPKP Provinsi D.I. Yogyakarta Jl.Parangtritis KM. 5,5 Sewon, Bantul diresmikan oleh Gubernur Provinsi D.I Yogyakarta Sri Sultan Hamengkubuwono X dan Kepala BPKP Didi Widayadi. Setelah peresmian, gedung kantor tersebut mulai ditempati lagi untuk melakukan aktivitas kegiatan sampai dengan sekarang.",
-			"type": "text"
-		}],
-		"title": "Sejarah Berdiri"
-	},
-	{
-		"content": [{
-			"subtitle": "Visi :",
-			"text": "Auditor Presiden yang responsif, interaktif, dan terpercaya untuk mewujudkan akuntabilitas keuangan negara yang berkualitas\n",
-			"type": "text"
-		},
-		{
-			"subtitle": "Misi :",
-			"type": "numbering",
-			"contentArray": [
-			  "Menyelenggarakan pengawasan intern terhadap akuntabilitas keuangan negara yang mendukung tata kepemerintahan yang baik dan bebas KKN.",
-			  "Membina secara efektif penyelenggaraan sistem pengendalian intern pemerintah.",
-			  "Mengembangkan kapasitas pengawasan intern pemerintah yang profesional dan kompeten",
-			  "Menyelenggarakan sistem dukungan pengambilan keputusan yang andal bagi Presiden/pemerintah."
+  "app_settings": {
+    "background_url": "images/background/bluen.jpg",
+    "password": "dn",
+    "feedback": {
+      "gmail_sender": "bpkp.jogja@gmail.com",
+      "gmail_password": "DjogjaIstimewa",
+      "to": "danie.yanuar@gmail.com",
+      "subject": "Kritik dan Saran Aplikasi Mandiri"
+    }
+  },
+  "app_content": [
+    {
+      "content": [
+        {
+          "subtitle": "\n\n\t\t\t\t\tSelamat Datang di Layanan Informasi Mandiri",
+          "text": "\n\n\n\n\n\n\n",
+          "type": "text"
+        },
+        {
+          "subtitle": "",
+          "type": "image",
+          "contentArray": [
+            "images/gallery/Gedung1.jpg"
           ]
-		},
-		{
-			"subtitle": "NILAI-NILAI LUHUR BPKP (P I O N I R)",
-			"type": "numbering",
-			"contentArray": [
-			  "Profesional",
-			  "Integritas",
-			  "Orientasi pada Pengguna",
-			  "Nurani dan Akal Sehat",
-			  "Independensi",
-			  "Responsibel"
+        }
+      ],
+      "title": "Home"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "\t\t\t\tSejarah berdirinya kantor Perwakilan BPKP DIY",
+          "text": "\n\tSejarah berdirinya kantor Perwakilan BPKP Provinsi D.I. Yogyakarta tidak lepas dari panjangnya sejarang berdirinya BPKP. Kantor Perwakilan BPKP Provinsi D.I. Yogyakarta termasuk kantor perwakilan BPKP yang sudah cukup lama yakni sejak tahun 1960-an. Pada saat itu lembaga BPKP masih bernama Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) sesuai dengan Keputusan Presiden Nomor 239 Tahun 1966 tentang dibentuknya Direktorat Djendral Pengawasan Keuangan Negara (DDPKN) pada Departemen Keuangan. Tugas DDPKN (dikenal kemudian sebagai DJPKN) meliputi pengawasan anggaran dan pengawasan badan usaha/jawatan, yang semula menjadi tugas DAN dan Thesauri Jenderal. Untuk kantor Perwakilan tersebut dibuka masih berkantor di wilayah Kusumanegara dan masih menjadi satu gedung dengan Departemen Keuangan. Baru pada tahun 1972 Kantor perwakilan dipindah ke Jl. Sultan Agung No. 20 Yogyakarta.",
+          "type": "text"
+        },
+        {
+          "subtitle": "",
+          "text": "\tPada saat berkantor di Jl. Sultan Agung No. 20 itulah nama DJPKN telah berubah menjadi Badan Pengawas Keuangan dan Pembangunan (BPKP) berdasarkan surat Keputusan Presiden Nomor 31 Tahun 1983 tanggal 30 Mei 1983 DJPKN ditransformasikan menjadi BPKP, sebuah lembaga pemerintah non departemen (LPND) yang berada di bawah dan bertanggung jawab langsung kepada Presiden. Kemudian tahun 1998 kantor Perwakilan BPKP Provinsi D.I. Yogyakarta pindah ke Jl. Parangtritis KM. 5,5 Sewon, Bantul dengan status tanah dan bangunan milik BPKP ",
+          "type": "text"
+        },
+        {
+          "subtitle": "",
+          "text": "\tPada tahun 2006 karena adanya bencana gempa di Jogjakarta, waktu itu kantor Perwakilan BPKP Provinsi D.I. Yogyakarta rusak parah. Untuk tetap bisa melaksanakan tugasnya, kantor dipindahkan ke Jalan  Mrican Baru Nomor 29-35 Yogyakarta untuk sementara hingga pembangunan gedung baru selesai dibangun. Pembangunan gedung baru dilakukan melalui kontrak multiyears tahun 2006-2007. Kemudian pada tanggal 23 Juni tahun 2008 gedung baru Perwakilan BPKP Provinsi D.I. Yogyakarta Jl.Parangtritis KM. 5,5 Sewon, Bantul diresmikan oleh Gubernur Provinsi D.I Yogyakarta Sri Sultan Hamengkubuwono X dan Kepala BPKP Didi Widayadi. Setelah peresmian, gedung kantor tersebut mulai ditempati lagi untuk melakukan aktivitas kegiatan sampai dengan sekarang.",
+          "type": "text"
+        }
+      ],
+      "title": "Sejarah Berdiri"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "Visi :",
+          "text": "Auditor Presiden yang responsif, interaktif, dan terpercaya untuk mewujudkan akuntabilitas keuangan negara yang berkualitas\n",
+          "type": "text"
+        },
+        {
+          "subtitle": "Misi :",
+          "type": "numbering",
+          "contentArray": [
+            "Menyelenggarakan pengawasan intern terhadap akuntabilitas keuangan negara yang mendukung tata kepemerintahan yang baik dan bebas KKN.",
+            "Membina secara efektif penyelenggaraan sistem pengendalian intern pemerintah.",
+            "Mengembangkan kapasitas pengawasan intern pemerintah yang profesional dan kompeten",
+            "Menyelenggarakan sistem dukungan pengambilan keputusan yang andal bagi Presiden/pemerintah."
           ]
-		},
+        },
+        {
+          "subtitle": "NILAI-NILAI LUHUR BPKP (P I O N I R)",
+          "type": "numbering",
+          "contentArray": [
+            "Profesional",
+            "Integritas",
+            "Orientasi pada Pengguna",
+            "Nurani dan Akal Sehat",
+            "Independensi",
+            "Responsibel"
+          ]
+        },
+        {
+          "subtitle": "SEMANGAT KERJA 5-AS BPKP",
+          "text": "\tKerja Keras, Kerja Cerdas, Kerja Tuntas, Kerja Ikhlas, Kerja Penuh Integritas.",
+          "type": "text"
+        }
+      ],
+      "title": "Visi Dan Misi"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "",
+          "type": "image",
+          "contentArray": [
+            "images/gallery/struktur_org.jpg"
+          ]
+        },
+        {
+          "subtitle": "1. Susunan Organisasi Perwakilan BPKP Provinsi D.I Yogyakarta terdiri dari ",
+          "type": "bullet",
+          "contentArray": [
+            "Bagian Tata Usaha terdiri dari : Sub Bagian Kepegawaian Sub Bagian Keuangan Sub Bagian Umum",
+            "Koordinator Kelompok Bidang Pengawasan Intansi Pemerintah Pusat",
+            "Koordinator Kelompok Bidang Akuntabilitas Pemerintah Daerah",
+            "Koordinator Kelompok Bidang Akuntan Negara",
+            "Koordinator Kelompok Bidang Investigasi",
+            "Koordinator Pengawas Kelompok JFA Bidang Prolap Serta Pembinaan APIP"
+          ]
+        },
+        {
+          "subtitle": "2. Bagian Tata Usaha mempunyai tugas melaksanakan :",
+          "type": "bullet",
+          "contentArray": [
+            "Urusan kepegawaian, keuangan, persuratan, urusan dalam, perlengkapan dan rumah tangga",
+            "Pengelolaan perpustakaan"
+          ]
+        },
+        {
+          "subtitle": "3. Bagian Tata Usaha menyelenggarakan fungsi :",
+          "type": "bullet",
+          "contentArray": [
+            "Pelaksanaan urusan kepegawaian, keuangan, persuratan, urusan dalam, perlengkapan dan rumah tangga",
+            "Pengelolaan perpustakaan"
+          ]
+        },
+        {
+          "subtitle": "4. Adapun Bidang Pengawasan mempunyai tugas :",
+          "type": "bullet",
+          "contentArray": [
+            "Bidang Pengawasan Instansi Pemerintah Pusat mempunyai tugas Memimpin, mengkoordinasikan, dan mengelola kegiatan pengawasan serta mengendalikan mutu hasil pengawasan pada Instansi Pemerintah Pusat di daerah dan Pemda yang sumber dananya berasal dari APBN, Dekon, Tugas Pembantuan dan Pinjaman Hibah Luar Negeri.",
+            "Pengelolaan perpustakaan Bidang Akuntabilitas Pemerintah Daerah mempunyai tugas melaksanakan penyusunan rencana, program, dan pengawasan intansi pemerintah daerah atas permintaan daerah serta pelaksanaan pengawasan penyelenggaraan akuntabilitas, dan evaluasi hasil pengawasan",
+            "Bidang Akuntan Negara mempunyai tugas melaksanakan penyusunan rencana, program dan pelaksanaan pemeriksaan serta evaluasi pelaksanaan good corporate governance dan laporan akuntabilitas kinerja badan usaha milik negara,Pertamina, cabang usaha Pertamina, kontraktor bagi hasil dan kontrak kerjasama, badan-badan lain yang didalamnya terdapat kepentingan pemerintah, dan badan usaha milik daerah atas permintaan daerah, serta evaluasi hasil pemeriksaan.",
+            "Bidang Investigasi mempunyai tugas melaksanakan penyusunan rencana, program, dan pelaksanaan pemeriksaan terhadap indikasi penyimpangan yang merugikan negara, badan usaha milik negara, dan badan-badan lain yang didalamnya terdapat kepentingan pemerintah, pemeriksaan terhadap hambatan kelancaran pembangunan, dan pmeberian bantuan pemeriksaan pada instansi penyidik dan instansi pemerintah lainnya.",
+            "Bidang P3A mempunyai tugas memimpin, mengkoordinasikan, mengelola, melaksanakan kegiatan penyiapan bahan penyusunan rencana dan program kegiatan, penyiapan bahan laporan realisasi kegiatan, penyusunan laporan berkala atas hasil-hasil pengawasan serta program pembinaan APIP (termasuk pembinaan jabatan fungsional auditor/JFA di lingkungan Perwakilan dan APIP Daerah). "
+          ]
+        },
+        {
+          "subtitle": "",
+          "text": "\tSelain struktur organisasi tersebut di atas, terdapat Kelompok Jabatan Fungsional mempunyai tugas melakukan kegiatan sesuai dengan jabatan fungsional masing-masing berdasarkan peraturan perundang-undangan yang berlaku. Di Perwakilan BPKP Daerah Istimewa Yogyakarta, Kelompok Jabatan Fungsional terdiri dari Jabatan Fungsional Auditor dan sejumlah jabatan fungsional lainnya yaitu Kelompok Jabatan Fungsional Analis Kepegawaian, Kelompok Jabatan Fungsional Arsiparis dan Kelompok Jabatan Fungsional Pranata Komputer.",
+          "type": "text"
+        }
+      ],
+      "title": "Struktur  Organisasi"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "\t\t\t\t\t\tPRODUK DAN LAYANAN",
+          "text": "",
+          "type": "text"
+        },
+        {
+          "subtitle": "1. Bidang Instansi Pemerintah Pusat",
+          "type": "bullet",
+          "contentArray": [
+            "Audit Kinerja Program Lintas Sektoral (untuk Instansi Vertikal)",
+            "Penyelenggaraan SPIP (untuk Instansi Vertikal)",
+            "Penyusunan Laporan Keuangan (untuk Instansi Vertikal)",
+            "Prioritas Pembangunan Nasional",
+            "Pengelolaan Aset",
+            "Audit Dana Alokasi Khusus",
+            "Audit Kinerja, Operasional, Eskalasi/Klaim",
+            "Evaluasi Penyerapan Anggaran",
+            "Audit Keuangan atas PHLN"
+          ]
+        },
+        {
+          "subtitle": "2. Bidang Akuntabilitas Pemerintah Daerah",
+          "type": "bullet",
+          "contentArray": [
+            "Audit Kinerja Program Lintas Sektoral (untuk Pemda)",
+            "Evaluasi Hambatan Kelancaran Pembangunan",
+            "Penyelenggaraan SPIP (untuk Pemda)",
+            "Penyusunan dan Penetapan APBD",
+            "Analisis Kinerja Keuangan Pemda",
+            "Penyusunan Laporan Keuangan (untuk Pemda)",
+            "Reviu Laporan Keuangan",
+            "Pengelolaan Aset",
+            "Bimtek AKIP",
+            "Evaluasi Kinerja Penyelenggaraan Pemda (EKPPD)",
+            "Implementasi SIMDA",
+            "Implementasi SIM Keuangan Desa"
+          ]
+        },
+        {
+          "subtitle": "3. Bidang Akuntan Negara",
+          "type": "bullet",
+          "contentArray": [
+            "Key Performance Indicator",
+            "Manajemen Risiko",
+            "Manajemen Aset",
+            "Pengembangan SPI",
+            "Implementasi GCG",
+            "SIA PDAM",
+            "BLUD",
+            "SIA BLUD"
+          ]
+        },
+        {
+          "subtitle": "4. Bidang Investigasi ",
+          "type": "bullet",
+          "contentArray": [
+            "Pendampingan Pengadaan Barang dan Jasa",
+            "Audit Investigatif",
+            "Perhitungan Kerugian Keuangan Negara",
+            "Pemberian Keterangan Ahli",
+            "Evaluasi Hambatan Kelancaran Pembangunan",
+            "Program Anti Korupsi",
+            "Fraud Control Plan",
+            "Kajian Hasil Pengawasan"
+          ]
+        },
+        {
+          "subtitle": "5. Bidang Program, Pelaporan, dan Pembinaan Aparat Pengawasan Intern Pemerintah",
+          "type": "bullet",
+          "contentArray": [
+            "Tata Kelola dan Kapabilitas APIP",
+            "Penerapan JFA",
+            "SIM HP Pemda"
+          ]
+        }
+      ],
+      "title": "Produk dan Layanan"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "",
+          "type": "gallery",
+          "contentArray": [
+            "images/gallery/Gedung1.jpg",
+            "images/gallery/andreas_sule.jpg",
+            "images/gallery/Bambang.jpg",
+            "images/gallery/Condro_Imantoro1.jpg",
+            "images/gallery/Condro_Imantoro2.jpg",
+            "images/gallery/Kamarudin.jpg",
+            "images/gallery/kresna_sumanar.jpg",
+            "images/gallery/poernomo.jpg",
+            "images/gallery/Rokhim.jpg",
+            "images/gallery/Sanusi.jpg",
+            "images/gallery/soekarjo.jpg",
+            "images/gallery/Sudarsono.jpg",
+            "images/gallery/Tytut_Ratih.jpg",
+            "images/gallery/troeno.jpg",
+            "images/gallery/umun.jpg",
+            "images/gallery/wahjwanto.jpg"
+          ]
+        }
+      ],
+      "title": "Gallery"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "",
+          "type": "gallery",
+          "contentArray": [
+            "images/kegiatan/01.png",
+            "images/kegiatan/02.png",
+            "images/kegiatan/03.png",
+            "images/kegiatan/04.png",
+            "images/kegiatan/05.png",
+            "images/kegiatan/06.png",
+            "images/kegiatan/07.png",
+            "images/kegiatan/08.png",
+            "images/kegiatan/09.png",
+            "images/kegiatan/10.png",
+            "images/kegiatan/11.png",
+            "images/kegiatan/12.png",
+            "images/kegiatan/13.png",
+            "images/kegiatan/14.png",
+            "images/kegiatan/15.png",
+            "images/kegiatan/16.png",
+            "images/kegiatan/17.png",
+            "images/kegiatan/18.png",
+            "images/kegiatan/19.png",
+            "images/kegiatan/20.png",
+            "images/kegiatan/21.png",
+            "images/kegiatan/22.png",
+            "images/kegiatan/23.png",
+            "images/kegiatan/24.png",
+            "images/kegiatan/25.png",
+            "images/kegiatan/26.png",
+            "images/kegiatan/27.png",
+            "images/kegiatan/28.png",
+            "images/kegiatan/29.png",
+            "images/kegiatan/30.png",
+            "images/kegiatan/31.png",
+            "images/kegiatan/32.png",
+            "images/kegiatan/33.png",
+            "images/kegiatan/34.png",
+            "images/kegiatan/35.png",
+            "images/kegiatan/36.png",
+            "images/kegiatan/37.png",
+            "images/kegiatan/38.png",
+            "images/kegiatan/39.png",
+            "images/kegiatan/40.png",
+            "images/kegiatan/41.png",
+            "images/kegiatan/42.png",
+            "images/kegiatan/43.png",
+            "images/kegiatan/44.png",
+            "images/kegiatan/45.png",
+            "images/kegiatan/46.png",
+            "images/kegiatan/47.png",
+            "images/kegiatan/48.png",
+            "images/kegiatan/49.png",
+            "images/kegiatan/50.png",
+            "images/kegiatan/51.png",
+            "images/kegiatan/52.png",
+            "images/kegiatan/53.png",
+            "images/kegiatan/54.png",
+            "images/kegiatan/55.png",
+            "images/kegiatan/56.png",
+            "images/kegiatan/57.png",
+            "images/kegiatan/58.png",
+            "images/kegiatan/59.png",
+            "images/kegiatan/60.png",
+            "images/kegiatan/61.png",
+            "images/kegiatan/62.png",
+            "images/kegiatan/63.png",
+            "images/kegiatan/64.png",
+            "images/kegiatan/65.png",
+            "images/kegiatan/66.png",
+            "images/kegiatan/67.png",
+            "images/kegiatan/68.png",
+            "images/kegiatan/69.png",
+            "images/kegiatan/70.png",
+            "images/kegiatan/71.png",
+            "images/kegiatan/72.png",
+            "images/kegiatan/73.png",
+            "images/kegiatan/74.png",
+            "images/kegiatan/75.png",
+            "images/kegiatan/76.png",
+            "images/kegiatan/77.png",
+            "images/kegiatan/78.png",
+            "images/kegiatan/79.png",
+            "images/kegiatan/80.png",
+            "images/kegiatan/81.png",
+            "images/kegiatan/82.png",
+            "images/kegiatan/83.png",
+            "images/kegiatan/84.png",
+            "images/kegiatan/85.png",
+            "images/kegiatan/86.png",
+            "images/kegiatan/87.png",
+            "images/kegiatan/88.png",
+            "images/kegiatan/89.png",
+            "images/kegiatan/90.png",
+            "images/kegiatan/91.png",
+            "images/kegiatan/92.png",
+            "images/kegiatan/93.png",
+            "images/kegiatan/94.png",
+            "images/kegiatan/95.png"
+          ]
+        }
+      ],
+      "title": "Gallery Kegiatan"
+    },
+    {
+      "content": [
+        {
+          "subtitle": "\n\nKritik Dan Saran untuk BPKP JOGJA",
+          "text": "\n\nTerima Kasih\n\nAtas Kritik Dan Sarannya\n\nSemoga dapat membuat kami lebih baik lagi, Aamiin",
+          "type": "feedback"
+        }
+      ],
+      "title": "Kritik & Saran"
+    },
+    {
+      "content": [
 		{
-			"subtitle": "SEMANGAT KERJA 5-AS BPKP",
-			"text": "\tKerja Keras, Kerja Cerdas, Kerja Tuntas, Kerja Ikhlas, Kerja Penuh Integritas.",
-			"type": "text"
-		}],
-		"title": "Visi Dan Misi"
-	},
-	{
-		"content": [{
-			"subtitle": "",
-			"type": "image",
-			"contentArray": ["images/gallery/struktur_org.jpg"]
-		},
-		{
-			"subtitle": "1. Susunan Organisasi Perwakilan BPKP Provinsi D.I Yogyakarta terdiri dari ",
-			"type": "bullet",
-			"contentArray": ["Bagian Tata Usaha terdiri dari : Sub Bagian Kepegawaian Sub Bagian Keuangan Sub Bagian Umum",
-			"Koordinator Kelompok Bidang Pengawasan Intansi Pemerintah Pusat",
-			"Koordinator Kelompok Bidang Akuntabilitas Pemerintah Daerah",
-			"Koordinator Kelompok Bidang Akuntan Negara",
-			"Koordinator Kelompok Bidang Investigasi",
-			"Koordinator Pengawas Kelompok JFA Bidang Prolap Serta Pembinaan APIP"]
-		},
-		{
-			"subtitle": "2. Bagian Tata Usaha mempunyai tugas melaksanakan :",
-			"type": "bullet",
-			"contentArray": ["Urusan kepegawaian, keuangan, persuratan, urusan dalam, perlengkapan dan rumah tangga",
-			"Pengelolaan perpustakaan"]
-		},
-		{
-			"subtitle": "3. Bagian Tata Usaha menyelenggarakan fungsi :",
-			"type": "bullet",
-			"contentArray": ["Pelaksanaan urusan kepegawaian, keuangan, persuratan, urusan dalam, perlengkapan dan rumah tangga",
-			"Pengelolaan perpustakaan"]
-		},
-		{
-			"subtitle": "4. Adapun Bidang Pengawasan mempunyai tugas :",
-			"type": "bullet",
-			"contentArray": ["Bidang Pengawasan Instansi Pemerintah Pusat mempunyai tugas Memimpin, mengkoordinasikan, dan mengelola kegiatan pengawasan serta mengendalikan mutu hasil pengawasan pada Instansi Pemerintah Pusat di daerah dan Pemda yang sumber dananya berasal dari APBN, Dekon, Tugas Pembantuan dan Pinjaman Hibah Luar Negeri.",
-			"Pengelolaan perpustakaan Bidang Akuntabilitas Pemerintah Daerah mempunyai tugas melaksanakan penyusunan rencana, program, dan pengawasan intansi pemerintah daerah atas permintaan daerah serta pelaksanaan pengawasan penyelenggaraan akuntabilitas, dan evaluasi hasil pengawasan",
-			"Bidang Akuntan Negara mempunyai tugas melaksanakan penyusunan rencana, program dan pelaksanaan pemeriksaan serta evaluasi pelaksanaan good corporate governance dan laporan akuntabilitas kinerja badan usaha milik negara,Pertamina, cabang usaha Pertamina, kontraktor bagi hasil dan kontrak kerjasama, badan-badan lain yang didalamnya terdapat kepentingan pemerintah, dan badan usaha milik daerah atas permintaan daerah, serta evaluasi hasil pemeriksaan.",
-			"Bidang Investigasi mempunyai tugas melaksanakan penyusunan rencana, program, dan pelaksanaan pemeriksaan terhadap indikasi penyimpangan yang merugikan negara, badan usaha milik negara, dan badan-badan lain yang didalamnya terdapat kepentingan pemerintah, pemeriksaan terhadap hambatan kelancaran pembangunan, dan pmeberian bantuan pemeriksaan pada instansi penyidik dan instansi pemerintah lainnya.",
-			"Bidang P3A mempunyai tugas memimpin, mengkoordinasikan, mengelola, melaksanakan kegiatan penyiapan bahan penyusunan rencana dan program kegiatan, penyiapan bahan laporan realisasi kegiatan, penyusunan laporan berkala atas hasil-hasil pengawasan serta program pembinaan APIP (termasuk pembinaan jabatan fungsional auditor/JFA di lingkungan Perwakilan dan APIP Daerah). "]
-		},
-		{
-			"subtitle": "",
-			"text": "\tSelain struktur organisasi tersebut di atas, terdapat Kelompok Jabatan Fungsional mempunyai tugas melakukan kegiatan sesuai dengan jabatan fungsional masing-masing berdasarkan peraturan perundang-undangan yang berlaku. Di Perwakilan BPKP Daerah Istimewa Yogyakarta, Kelompok Jabatan Fungsional terdiri dari Jabatan Fungsional Auditor dan sejumlah jabatan fungsional lainnya yaitu Kelompok Jabatan Fungsional Analis Kepegawaian, Kelompok Jabatan Fungsional Arsiparis dan Kelompok Jabatan Fungsional Pranata Komputer.",
-			"type": "text"
-		}],
-		"title": "Struktur  Organisasi"
-	},
-	{
-		"content": [{
-			"subtitle": "1. Bidang Instansi Pemerintah Pusat",
-			"type": "bullet",
-			"contentArray": ["Audit Kinerja Program Lintas Sektoral (untuk Instansi Vertikal)",
-			"Penyelenggaraan SPIP (untuk Instansi Vertikal)",
-			"Penyusunan Laporan Keuangan (untuk Instansi Vertikal)",
-			"Prioritas Pembangunan Nasional",
-			"Pengelolaan Aset",
-			"Audit Dana Alokasi Khusus",
-			"Audit Kinerja, Operasional, Eskalasi/Klaim",
-			"Evaluasi Penyerapan Anggaran",
-			"Audit Keuangan atas PHLN"]
-		},
-		{
-			"subtitle": "2. Bidang Akuntabilitas Pemerintah Daerah",
-			"type": "bullet",
-			"contentArray": ["Audit Kinerja Program Lintas Sektoral (untuk Pemda)",
-			"Evaluasi Hambatan Kelancaran Pembangunan",
-			"Penyelenggaraan SPIP (untuk Pemda)",
-			"Penyusunan dan Penetapan APBD",
-			"Analisis Kinerja Keuangan Pemda",
-			"Penyusunan Laporan Keuangan (untuk Pemda)",
-			"Reviu Laporan Keuangan",
-			"Pengelolaan Aset",
-			"Bimtek AKIP",
-			"Evaluasi Kinerja Penyelenggaraan Pemda (EKPPD)",
-			"Implementasi SIMDA",
-			"Implementasi SIM Keuangan Desa"]
-		},
-		{
-			"subtitle": "3. Bidang Akuntan Negara",
-			"type": "bullet",
-			"contentArray": ["Key Performance Indicator",
-			"Manajemen Risiko",
-			"Manajemen Aset",
-			"Pengembangan SPI",
-			"Implementasi GCG",
-			"SIA PDAM",
-			"BLUD",
-			"SIA BLUD"]
-		},
-		{
-			"subtitle": "4. Bidang Investigasi ",
-			"type": "bullet",
-			"contentArray": ["Pendampingan Pengadaan Barang dan Jasa",
-			"Audit Investigatif",
-			"Perhitungan Kerugian Keuangan Negara",
-			"Pemberian Keterangan Ahli",
-			"Evaluasi Hambatan Kelancaran Pembangunan",
-			"Program Anti Korupsi",
-			"Fraud Control Plan",
-			"Kajian Hasil Pengawasan"]
-		},
-		{
-			"subtitle": "5. Bidang Program, Pelaporan, dan Pembinaan Aparat Pengawasan Intern Pemerintah",
-			"type": "bullet",
-			"contentArray": ["Tata Kelola dan Kapabilitas APIP",
-			"Penerapan JFA",
-			"SIM HP Pemda"]
-		}],
-		"title": "PRODUK DAN LAYANAN"
-	},
-	{
-		"content": [{
-			"subtitle": "",
-			"type": "gallery",
-			"contentArray": ["images/gallery/Gedung1.jpg",
-			"images/gallery/andreas_sule.jpg",
-			"images/gallery/Bambang.jpg",
-			"images/gallery/Condro_Imantoro1.jpg",
-			"images/gallery/Condro_Imantoro2.jpg",
-			"images/gallery/Kamarudin.jpg",
-			"images/gallery/kresna_sumanar.jpg",
-			"images/gallery/poernomo.jpg",
-			"images/gallery/Rokhim.jpg",
-			"images/gallery/Sanusi.jpg",
-			"images/gallery/soekarjo.jpg",
-			"images/gallery/Sudarsono.jpg",
-			"images/gallery/Tytut_Ratih.jpg",
-			"images/gallery/troeno.jpg",
-			"images/gallery/umun.jpg",
-			"images/gallery/wahjwanto.jpg"]
-		}],
-		"title": "Gallery"
-	},
-	{
-		"content": [{
-			"subtitle": "\n\nKritik Dan Saran untuk BPKP JOGJA",
-			"text": "\n\n\n\n\nUntuk kritik dan saran, silahkan klik link di bawah ini:",
-			"type": "feedback"
-		}],
-		"title": "Kritik & Saran"
-	}]
+          "subtitle": "",
+          "type": "image",
+          "contentArray": [
+            "images/main/Contact.png"
+          ]
+        },
+        {
+          "subtitle": "INFORMASI PUBLIK BPKP JOGJA",
+          "text": "Klik untuk menuju website BPKP",
+          "type": "info"
+        }
+      ],
+      "title": "Informasi Publik"
+    }
+  ]
 }

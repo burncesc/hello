@@ -10,7 +10,8 @@
 				height.gallery="{bodyText.height + 20}"
 				height.image="{feedbackText.height + 20}"
 				height.numbering="{orderList.height + 25*m.fontsizemultiplier}"
-				height.text="{bodyText.height + 25*m.fontsizemultiplier}">
+				height.text="{bodyText.height + 25*m.fontsizemultiplier}"
+				height.info="{infoText.height +20}">
 	<s:layout>
 		<s:VerticalLayout gap="10" paddingBottom="0" paddingLeft="0" paddingRight="0" paddingTop="0"
 						  horizontalAlign.image="center"/>
@@ -53,7 +54,9 @@
 					currentState = "numbering";
 				} else if(data.type==ContentItem.TYPE_BULLET) {
 					currentState = "bullet";
-				} 
+				} else if(data.type==ContentItem.TYPE_INFO){
+					currentState="info";
+				}
 			}
 			
 			override protected function getCurrentRendererState():String {
@@ -67,6 +70,8 @@
 					return "gallery";
 				if (data.type==ContentItem.TYPE_FEEDBACK)
 					return "feedback";
+				if (data.type==ContentItem.TYPE_INFO)
+					return "info";
 				
 				return "text";
 			}
@@ -77,6 +82,12 @@
 //				var req:URLRequest = new URLRequest("mailto:"+data.subtitle+"?subject=Kritik dan Saran");
 //				navigateToURL(req,"_self");
 				AlertDialog.showFeedbackPopup(m.mainApp,AlertDialog.ANIM_DROP);
+			}
+			protected function link_clickHandler(event:MouseEvent):void
+			{
+				m.mainApp.minimize();
+				var req:URLRequest = new URLRequest("http://www.bpkp.go.id/diy.bpkp");
+				navigateToURL(req,"_self");
 			}
 			
 			protected function onDataChange(event:FlexEvent):void {
@@ -92,6 +103,7 @@
 		<s:State name="gallery"/>
 		<s:State name="numbering"/>
 		<s:State name="bullet"/>
+		<s:State name="info"/>
 	</s:states>
 	
 	<fx:Declarations>
@@ -104,6 +116,11 @@
 	<s:Label id="feedbackText" includeIn="feedback" width="100%" fontFamily="calibri"
 			 fontSize="{12*m.fontsizemultiplier}" text="{data.text}" textAlign="center"/>
 	<s:Label includeIn="feedback" width="100%" buttonMode="true" click="label1_clickHandler(event)"
+			 color="#0000CF" fontFamily="calibribold" fontSize="{12*m.fontsizemultiplier}"
+			 fontWeight="bold" text="{data.subtitle}" textAlign="center"/>
+	<s:Label id="infoText" includeIn="info" width="100%" fontFamily="calibri"
+			 fontSize="{12*m.fontsizemultiplier}" text="{data.text}" textAlign="center"/>
+	<s:Label includeIn="info" width="100%" buttonMode="true" click="link_clickHandler(event)"
 			 color="#0000CF" fontFamily="calibribold" fontSize="{12*m.fontsizemultiplier}"
 			 fontWeight="bold" text="{data.subtitle}" textAlign="center"/>
 	<s:Image includeIn="image" width="90%" source="{data.contentArray.getItemAt(0)}"/>

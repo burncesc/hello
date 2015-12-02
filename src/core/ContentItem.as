@@ -11,6 +11,7 @@ package core
 		public static var TYPE_NUMBERING:String = "numbering";
 		public static var TYPE_BULLET:String = "bullet";
 		public static var TYPE_FEEDBACK:String = "feedback";
+		public static var TYPE_INFO:String = "info";
 		
 		[Bindable] public var subtitle:String;
 		[Bindable] public var type:String;
